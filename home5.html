@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Long Text Form</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fdf6f6;
+            text-align: center;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        h3 {
+            color: #d32f2f;
+            font-size: 24px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        img.gif {
+            width: 300px;
+            height: auto;
+            margin: 20px auto;
+            border-radius: 10px;
+            display: block;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        button {
+            background-color: #d32f2f;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.2s;
+            text-align: center;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #b71c1c;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+    </style>
+</head>
+<body>
+
+    <h3>Хоёулаа нэгнийгээ тодорхой хэмжээнд мэддэг болсон гэж би бодож байна.</h3>
+    <h3>Би чамтай илүү дотно харилцаатай болмоор байна</h3>
+    <h3>Чамайг өмнө нь 1 удаа алдахад надаа их хэцүү байсан</h3>
+    <h3>Гэхдээ одоо надад дахин боломж гарч ирлээ.</h3>
+    <h3>Will you be my Valentine? ❤️</h3>
+
+    <img class="gif" src="https://media0.giphy.com/media/vDhDcIEmShbUI/200w.gif?cid=6c09b952fe2l8gw1vwk45xwk4igq8g2fjqi1gyo0gzxhtpy4&ep=v1_gifs_search&rid=200w.gif&ct=g" alt="Cute GIF">
+    <h3>Хариуг IG-гаар илгээгээрэй 😘</h3>
+    <!-- Instagram Redirect Button -->
+    <button onclick="window.open('https://www.instagram.com/', '_blank')">Instagram-луу очих 👉</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let elements = document.querySelectorAll("h3, .gif, button");
+            let delay = 1000; // 1 second between each appearance
+
+            elements.forEach((element, index) => {
+                setTimeout(() => {
+                    element.style.opacity = "1";
+                }, index * delay);
+            });
+        });
+    </script>
+
+</body>
+</html>
